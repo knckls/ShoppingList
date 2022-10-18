@@ -39,6 +39,7 @@ object ShopListRepositoryImpl: ShopListRepository {
 
     override fun deleteShopItem(shopItem: ShopItem) {
         shopList.remove(shopItem)
+        updateList()
     }
 
     override fun getShopItem(shopItemId: Int): ShopItem {
