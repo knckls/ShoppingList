@@ -7,12 +7,15 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="?attr/actionModePasteDrawable"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="?attr/actionModePasteDrawable"
         android:supportsRtl="true"
         android:theme="@style/Theme.ShoppingList"
         tools:targetApi="31">
+        <activity
+            android:name=".presentation.ShopItemActivity"
+            android:windowSoftInputMode='adjustResize' />  <!-- чтобы кнопка поднималась вместе с клавиатурой-->
         <activity
             android:name=".presentation.MainActivity"
             android:exported="true">
